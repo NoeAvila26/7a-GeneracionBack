@@ -1,0 +1,27 @@
+{
+  "name": "express-hello-world",
+  "version": "1.0.0",
+  "description": "\"hello world using express\",",
+  "main": "server2.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "test": "echo'test running'"
+
+   
+  },
+  "keywors":[
+    "express",
+    "hello",
+    "world",
+    "kodemia"
+  ],
+  "author": "NoeAvila26",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}

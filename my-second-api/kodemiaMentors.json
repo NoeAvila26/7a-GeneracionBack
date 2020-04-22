@@ -1,0 +1,19 @@
+{
+  "mentors":[
+  {
+    "mentorName": "israel",
+    "specialty":"frontEND",
+    "generation": 7
+  },
+  {
+    "mentorName": "charles",
+    "specialty":"backEND",
+    "generation": 7
+  },
+  {
+    "mentorName": "david",
+    "specialty":"reacT",
+    "generation": 7
+  }
+  ]
+}
