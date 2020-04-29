@@ -1,0 +1,34 @@
+{
+  "koders": [
+      {
+          "id": 123,
+          "name": "Fernanda Palacios",
+          "generation": 7,
+          "active": true
+      },
+      {
+          "id": 250,
+          "name": "Victor Torres",
+          "generation": 7,
+          "active": true
+      },
+      {
+          "id": 251,
+          "name": "No bady",
+          "generation": 6,
+          "active": false
+      },
+      {
+          "id": 252,
+          "name": "Someone",
+          "generation": 6,
+          "active": false
+      },
+      {
+          "id": 253,
+          "name": "Noe López",
+          "generation": 5,
+          "active": true
+      }
+  ]
+}
