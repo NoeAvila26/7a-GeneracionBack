@@ -33,7 +33,7 @@ router.post('/', async (request, response) => {
 router.delete('/:id', async (request, response) => {
   try {
     const { id } = request.params
-    const mentorDeleted = await mentors.delteById(id)
+    const mentorDeleted = await mentors.deleteById(id)
     response.json({
       success: true,
       message: `mentor with id ${id} deleted`,

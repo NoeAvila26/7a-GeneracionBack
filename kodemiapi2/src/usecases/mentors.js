@@ -10,11 +10,11 @@ function create (mentorData) {
 }
 
 function deleteById (id) {
-  return Mentor.deleteById(id)
+  return Mentor.findByIdAndRemove(id)
 }
 
 function upDateById (id, newMentorData) {
-  return Mentor.upDateById(id, newMentorData)
+  return Mentor.findByIdAndUpdate(id, newMentorData)
 }
 
 module.exports = {
