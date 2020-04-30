@@ -1,1 +1,1 @@
-# creation of server with / mongoose db /mongoDb compass/ express / and clean architecture
+# creation of server with  node js/ express / mongoose db /mongoDb compass/ and  clean architecture implementation
