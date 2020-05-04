@@ -1,15 +1,34 @@
 const express = require('express')
 const koders = require('../usecases/koders')
 const router = express.Router()
+const auth = require('../middlewares/auth')
 
-router.get('/', async (request, response) => {
-  const allKoders = await koders.getAll()
-  response.json({
-    message: 'all koders',
-    data: {
-      koders: allKoders
-    }
-  })
+router.use((request, response, next) => {
+  console.log('middleware router koders')
+  next()
+})
+
+// GET /koders
+// endpoint
+
+router.get('/', (request, response, next) => {
+  console.log('middleware en GET/koders')
+  next()
+}, async (request, response) => {
+  try {
+    const allKoders = await koders.getAll()
+    response.json({
+      message: 'all koders',
+      data: {
+        koders: allKoders
+      }
+    })
+  } catch (error) {
+    response.json({
+      success: false,
+      error: error.message
+    })
+  }
 })
 
 // se pueden ocupar estas dos opciones
@@ -27,7 +46,7 @@ router.get('/', async (request, response) => {
 //     }
 //     if(Object.entries(errorObject).length )
 
-router.post('/', async (request, response) => {
+router.post('/', auth, async (request, response) => {
   try {
     const newKoder = await koders.create(request.body)
     response.json({
@@ -97,6 +116,28 @@ router.patch('/:id', async (request, response) => {
     response.json({
       success: false,
       message: error.message
+    })
+  }
+})
+
+// siempre se ocupa signup para el registro
+// y signin para el login
+
+router.post('/signup', async (request, response) => {
+  try {
+    const newKoder = await koders.signup(request.body)
+    response.json({
+      success: true,
+      message: 'koder registered',
+      data: {
+        koder: newKoder
+      }
+    })
+  } catch (error) {
+    response.status(400)
+    response.json({
+      success: false,
+      error: error.message
     })
   }
 })

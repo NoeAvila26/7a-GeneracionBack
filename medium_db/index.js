@@ -8,9 +8,8 @@ async function main () {
     console.log('SERVER IS RUNNING')
   })
 }
-
 main()
   .then(() => {
-    console.log('server ready')
+    console.log('SERVER IS READY')
   })
   .catch(error => console.error('ERROR:', error))
